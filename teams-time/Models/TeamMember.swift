@@ -24,6 +24,16 @@ struct TeamMember {
         self.workingTime = workingTime
         self.contact = contact
     }
+    
+    static func getMembersLit() -> [TeamMember] {
+        [
+          TeamMember(name: "Anton", timezone: .samara, contact: "@auntant"),
+          TeamMember(name: "Bektemur", timezone: .tashkent, contact: "bektemur07"),
+          TeamMember(name: "Aigiz", timezone: .dublin, contact: ""),
+          TeamMember(name: "Ilya", timezone: .minsk, contact: "@ilyastratovich"),
+          TeamMember(name: "Anna", timezone: .samara, contact: "@belikovanna")
+        ]
+    }
 }
 
 struct WorkingTime {
