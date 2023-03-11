@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserActivityViewController.swift
 //  teams-time
 //
 //  Created by Anton Kuzmin on 09.03.2023.
@@ -39,14 +39,18 @@ final class UserActivityViewController: UIViewController {
     }
     
     @objc private func setCurrentTime() {
+        currentTimeLabel.text = getCurrentTime()
+
+        defineStatus()
+    }
+    
+    private func getCurrentTime() -> String {
         let formatter = DateFormatter()
         
         formatter.timeZone = TimeZone(identifier: user.timezone.rawValue)
         formatter.dateFormat = "HH:mm:ss"
         
-        currentTimeLabel.text = formatter.string(from: Date())
-
-        defineStatus()
+        return formatter.string(from: Date())
     }
     
     private func defineStatus() {
