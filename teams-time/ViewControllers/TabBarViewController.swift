@@ -14,6 +14,6 @@ final class TabBarViewController: UITabBarController {
         let appearance = UITabBarAppearance()
         tabBar.standardAppearance = appearance
         tabBar.scrollEdgeAppearance = appearance
+        tabBar.layer.borderWidth = 0.5
     }
-   
 }
