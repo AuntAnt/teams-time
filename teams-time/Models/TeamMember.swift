@@ -37,8 +37,8 @@ struct TeamMember {
 }
 
 struct WorkingTime {
-    var from: Double
-    var to: Double
+    var from: Int
+    var to: Int
 }
 
 enum Timezone: String {
@@ -51,4 +51,9 @@ enum Timezone: String {
     case tashkent = "Asia/Tashkent"
     case bishkek = "Asia/Bishkek"
     case almaty = "Asia/Almaty"
+}
+
+enum Status: String {
+    case active = "Active"
+    case inactive = "Inactive"
 }
