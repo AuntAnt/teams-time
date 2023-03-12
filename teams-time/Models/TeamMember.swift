@@ -41,7 +41,7 @@ struct WorkingTime {
     var to: Int
 }
 
-enum Timezone: String {
+enum Timezone: String, CaseIterable {
     case kiev = "Europe/Kiev"
     case minsk = "Europe/Minsk"
     case moscow = "Europe/Moscow"
