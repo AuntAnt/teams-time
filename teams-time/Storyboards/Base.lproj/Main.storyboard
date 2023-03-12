@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1773" y="-20"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="80s-20-hAp">
             <objects>
-                <tabBarController storyboardIdentifier="mainTabBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zWs-8d-8su" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zWs-8d-8su" customClass="TabBarViewController" customModule="teams_time" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TEU-Bw-6Hs">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
