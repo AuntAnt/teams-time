@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89FDA29BE017200B5B558 /* TabBarViewController.swift */; };
 		9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83629BA3A3D008B1D08 /* AppDelegate.swift */; };
 		9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83829BA3A3D008B1D08 /* SceneDelegate.swift */; };
 		9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16E89FDA29BE017200B5B558 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9B05C83329BA3A3D008B1D08 /* teams-time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teams-time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B05C83629BA3A3D008B1D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B05C83829BA3A3D008B1D08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */,
+				16E89FDA29BE017200B5B558 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */,
 				9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */,
 				9B05C84F29BA5792008B1D08 /* TeamMember.swift in Sources */,
+				16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */,
 				9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
