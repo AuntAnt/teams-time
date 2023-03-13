@@ -10,14 +10,12 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTextField: UITextField!
-    
     @IBOutlet var timeZonePicker: UIPickerView?
-    
     @IBOutlet var loginButton: UIButton!
     
     let timezone = Timezone.allCases
     
-    private var user: TeamMember?
+    private var user: TeamMember!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,44 +25,45 @@ final class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 8
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let mainVC = segue.destination as? MainViewController else { return }
-//        mainVC.userName = user?.name
-//    }
-//
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarVC = segue.destination as? TabBarViewController else { return }
+        guard let mainVC = tabBarVC.viewControllers?.first as? UserActivityViewController else { return }
+        
+        mainVC.user = user
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
-
     @IBAction func logInPressed() {
         guard let userName = userNameTextField.text else { return }
-        user = TeamMember.getMembers().first(where: { $0.name == userName })
-        guard user != nil else {
+        let selectedTimezone = timezone[timeZonePicker?.selectedRow(inComponent: 0) ?? 0]
+        
+        user = TeamMember(name: userName, timezone: selectedTimezone, contact: nil)
+        
+        if userNameTextField.text == "" {
             showAlert(
-                title: "Invalid login",
-                message: "Please, enter correct login",
+                title: "Required field is empty",
+                message: "Please, enter your name",
                 textField: userNameTextField
             )
-            return
+        } else {
+            performSegue(withIdentifier: "openMainVC", sender: nil)
         }
-        performSegue(withIdentifier: "openMainVC", sender: nil)
     }
-    
     
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = ""
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
     
 }
 
-extension LoginViewController: UIPickerViewDataSource {
+extension LoginViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -74,16 +73,10 @@ extension LoginViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Timezone.allCases[row].rawValue
+        return timezone[row].rawValue
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 40
     }
-    
 }
-
-extension LoginViewController: UIPickerViewDelegate {
-}
-
-

@@ -29,7 +29,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="hgq-7w-ZDz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="4A5-0u-GNg" id="9ia-JP-VQh"/>
                                                 </connections>
@@ -66,6 +66,7 @@
                         <outlet property="loginButton" destination="SiT-hT-XcN" id="OX0-ej-xLA"/>
                         <outlet property="timeZonePicker" destination="Co1-64-yyH" id="W3c-2F-MV1"/>
                         <outlet property="userNameTextField" destination="Ey4-F8-ah8" id="s0F-3n-ve0"/>
+                        <segue destination="SCs-Om-563" kind="presentation" identifier="openMainVC" modalPresentationStyle="fullScreen" id="82A-IS-aa5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -75,7 +76,7 @@
         <!--mainTabBar-->
         <scene sceneID="l60-kV-Mwv">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="mainTabBar" storyboardName="MainTabBar" referencedIdentifier="mainTabBar" id="SCs-Om-563" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="mainTabBar" storyboardName="Main" referencedIdentifier="mainTabBar" id="SCs-Om-563" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kvR-m8-Avz"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Miu-fZ-eMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
