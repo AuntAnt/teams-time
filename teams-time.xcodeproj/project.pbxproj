@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89FDA29BE017200B5B558 /* TabBarViewController.swift */; };
+		8015777A29BF9C55004C007F /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015777929BF9C54004C007F /* MemberCell.swift */; };
+		8015777C29BF9C7E004C007F /* TeamListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8015777B29BF9C7E004C007F /* TeamListStoryboard.storyboard */; };
+		8015777E29BF9E1C004C007F /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015777D29BF9E1C004C007F /* TeamListViewController.swift */; };
 		9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83629BA3A3D008B1D08 /* AppDelegate.swift */; };
 		9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83829BA3A3D008B1D08 /* SceneDelegate.swift */; };
 		9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		16E89FDA29BE017200B5B558 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8015777929BF9C54004C007F /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		8015777B29BF9C7E004C007F /* TeamListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeamListStoryboard.storyboard; sourceTree = "<group>"; };
+		8015777D29BF9E1C004C007F /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		9B05C83329BA3A3D008B1D08 /* teams-time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teams-time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B05C83629BA3A3D008B1D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B05C83829BA3A3D008B1D08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8015777829BF9C54004C007F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8015777929BF9C54004C007F /* MemberCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9B05C82A29BA3A3D008B1D08 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +78,7 @@
 		9B05C83529BA3A3D008B1D08 /* teams-time */ = {
 			isa = PBXGroup;
 			children = (
+				8015777829BF9C54004C007F /* Views */,
 				9B05C84D29BA3B0B008B1D08 /* Models */,
 				9B05C84C29BA3AFB008B1D08 /* ViewControllers */,
 				9B05C84B29BA3AEB008B1D08 /* Storyboards */,
@@ -89,6 +104,7 @@
 				9B05C83C29BA3A3D008B1D08 /* Main.storyboard */,
 				9B05C84129BA3A3E008B1D08 /* LaunchScreen.storyboard */,
 				9B05C85629BDD343008B1D08 /* SettingsScreen.storyboard */,
+				8015777B29BF9C7E004C007F /* TeamListStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -97,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */,
+				8015777D29BF9E1C004C007F /* TeamListViewController.swift */,
 				9B05C85829BDD520008B1D08 /* SettingsViewController.swift */,
 				16E89FDA29BE017200B5B558 /* TabBarViewController.swift */,
 			);
@@ -172,6 +189,7 @@
 				9B05C84329BA3A3E008B1D08 /* LaunchScreen.storyboard in Resources */,
 				9B05C85729BDD343008B1D08 /* SettingsScreen.storyboard in Resources */,
 				9B05C84029BA3A3E008B1D08 /* Assets.xcassets in Resources */,
+				8015777C29BF9C7E004C007F /* TeamListStoryboard.storyboard in Resources */,
 				9B05C83E29BA3A3D008B1D08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,9 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */,
+				8015777E29BF9E1C004C007F /* TeamListViewController.swift in Sources */,
 				9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */,
 				9B05C84F29BA5792008B1D08 /* TeamMember.swift in Sources */,
 				9B05C85929BDD520008B1D08 /* SettingsViewController.swift in Sources */,
+				8015777A29BF9C55004C007F /* MemberCell.swift in Sources */,
 				16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */,
 				9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */,
 			);

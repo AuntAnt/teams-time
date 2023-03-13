@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TeamListViewController: UITableViewController {
+final class TeamListViewController: UITableViewController {
     private let teamMembers = TeamMember.getMembers()
 }
 // MARK: - Table view data source
