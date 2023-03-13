@@ -73,7 +73,7 @@
                             <outlet property="delegate" destination="mFa-3f-p50" id="5Ru-8F-FHx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="person.3.fill" catalog="system" id="1uL-td-jat"/>
+                    <tabBarItem key="tabBarItem" title="TeamMembers" image="person.3.fill" catalog="system" id="1uL-td-jat"/>
                     <navigationItem key="navigationItem" title="Team Members" id="nO3-Un-hXo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBR-0a-iYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
