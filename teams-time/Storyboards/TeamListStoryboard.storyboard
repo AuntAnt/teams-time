@@ -65,6 +65,7 @@
                                     <outlet property="memberImageView" destination="sPW-lX-hGT" id="jre-wz-Zzj"/>
                                     <outlet property="nameLabel" destination="hr3-L8-acN" id="F3A-T5-Slo"/>
                                     <outlet property="positionLabel" destination="Ann-uu-ce3" id="wyK-RY-ub5"/>
+                                    <segue destination="dlx-BH-Vyk" kind="presentation" identifier="" id="Ns2-If-Chx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,6 +81,14 @@
             </objects>
             <point key="canvasLocation" x="2819.0839694656488" y="-64.08450704225352"/>
         </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="4eC-sl-2qF">
+            <objects>
+                <viewControllerPlaceholder id="dlx-BH-Vyk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSP-G0-S1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3589" y="-144"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ayt-7v-jOh">
             <objects>
@@ -87,6 +96,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lh9-pX-35b"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JcM-sU-OYi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
