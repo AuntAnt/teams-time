@@ -77,6 +77,24 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBR-0a-iYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1892.3664122137404" y="-64.08450704225352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ih0-V3-cx7">
+            <objects>
+                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Ckz-Hw-MZc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rYw-m4-Bfo">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mFa-3f-p50" kind="relationship" relationship="rootViewController" id="fNO-Oc-gWK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1F-jW-0ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="965.64885496183206" y="-64.08450704225352"/>
         </scene>
     </scenes>
