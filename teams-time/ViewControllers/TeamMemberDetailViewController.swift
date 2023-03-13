@@ -14,7 +14,6 @@ class TeamMemberDetailViewController: UIViewController {
             teamMemberImageView.layer.cornerRadius = teamMemberImageView.frame.height / 2
         }
     }
-    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
@@ -22,7 +21,6 @@ class TeamMemberDetailViewController: UIViewController {
     
     var currentTeamMember: TeamMember!
     var currentStatus = Status.self
-    
     
     @IBOutlet var contactButton: UIButton!
 
