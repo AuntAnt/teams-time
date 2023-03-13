@@ -8,11 +8,14 @@
 import UIKit
 
 final class TeamListViewController: UITableViewController {
+    
     private let teamMembers = TeamMember.getMembers()
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let currentIndex = tableView.indexPathForSelectedRow
-        guard let infoVC = segue.destination as? TeamMemberDetailViewController else { return }
-        infoVC.currentTeamMember = teamMembers[currentIndex!.row]
+        let personVC = segue.destination as? TeamMemberDetailViewController
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        personVC?.teamMember = teamMembers[indexPath.section]
     }
 }
 // MARK: - Table view data source
@@ -48,4 +51,3 @@ extension TeamListViewController {
         0
     }
 }
-

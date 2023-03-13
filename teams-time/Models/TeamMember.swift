@@ -13,7 +13,7 @@ struct TeamMember {
     var contact: String?
     
     init(name: String,
-         jobTitle: String = "iOS Developer",
+         jobTitle: String = "Project Manager",
          timezone: Timezone,
          workingTime: WorkingTime = WorkingTime(from: 9, to: 18),
          contact: String?
@@ -27,11 +27,11 @@ struct TeamMember {
     
     static func getMembers() -> [TeamMember] {
         [
-          TeamMember(name: "Anton", jobTitle: "Project Manager", timezone: .samara, contact: "@auntant"),
-          TeamMember(name: "Bektemur", timezone: .tashkent, contact: "bektemur07"),
-          TeamMember(name: "Aigiz", timezone: .dublin, contact: "@iGiz_13"),
-          TeamMember(name: "Ilya", timezone: .minsk, contact: "@ilyastratovich"),
-          TeamMember(name: "Anna", timezone: .samara, contact: "@belikovanna")
+          TeamMember(name: "Anton", jobTitle: "iOS Developer", timezone: .samara, contact: "@auntant"),
+          TeamMember(name: "Bektemur", jobTitle: "iOS Developer", timezone: .tashkent, contact: "bektemur07"),
+          TeamMember(name: "Aigiz", jobTitle: "iOS Developer", timezone: .dublin, contact: "@iGiz_13"),
+          TeamMember(name: "Ilya", jobTitle: "iOS Developer", timezone: .minsk, contact: "@ilyastratovich"),
+          TeamMember(name: "Anna", jobTitle: "iOS Developer", timezone: .samara, contact: "@belikovanna")
         ]
     }
 }
