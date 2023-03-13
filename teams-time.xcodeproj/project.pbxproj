@@ -22,6 +22,8 @@
 		9B05C85929BDD520008B1D08 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C85829BDD520008B1D08 /* SettingsViewController.swift */; };
 		C8CE3A6429BF69A0003D8362 /* TeamMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE3A6329BF69A0003D8362 /* TeamMemberDetailViewController.swift */; };
 		C8CE3A6C29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CE3A6B29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard */; };
+		9B3B2B6F29BFB3E400D3B907 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2B6E29BFB3E400D3B907 /* LoginViewController.swift */; };
+		9B3B2B7129BFB3EE00D3B907 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B2B7029BFB3EE00D3B907 /* LoginStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		9B05C85829BDD520008B1D08 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C8CE3A6329BF69A0003D8362 /* TeamMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewController.swift; sourceTree = "<group>"; };
 		C8CE3A6B29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamMemberDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		9B3B2B6E29BFB3E400D3B907 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9B3B2B7029BFB3EE00D3B907 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		9B05C84B29BA3AEB008B1D08 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				9B3B2B7029BFB3EE00D3B907 /* LoginStoryboard.storyboard */,
 				9B05C83C29BA3A3D008B1D08 /* Main.storyboard */,
 				9B05C84129BA3A3E008B1D08 /* LaunchScreen.storyboard */,
 				9B05C85629BDD343008B1D08 /* SettingsScreen.storyboard */,
@@ -117,6 +122,7 @@
 		9B05C84C29BA3AFB008B1D08 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B3B2B6E29BFB3E400D3B907 /* LoginViewController.swift */,
 				9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */,
 				8015777D29BF9E1C004C007F /* TeamListViewController.swift */,
 				9B05C85829BDD520008B1D08 /* SettingsViewController.swift */,
@@ -195,6 +201,7 @@
 				9B05C84329BA3A3E008B1D08 /* LaunchScreen.storyboard in Resources */,
 				9B05C85729BDD343008B1D08 /* SettingsScreen.storyboard in Resources */,
 				9B05C84029BA3A3E008B1D08 /* Assets.xcassets in Resources */,
+				9B3B2B7129BFB3EE00D3B907 /* LoginStoryboard.storyboard in Resources */,
 				8015777C29BF9C7E004C007F /* TeamListStoryboard.storyboard in Resources */,
 				C8CE3A6C29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard in Resources */,
 				9B05C83E29BA3A3D008B1D08 /* Main.storyboard in Resources */,
@@ -208,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3B2B6F29BFB3E400D3B907 /* LoginViewController.swift in Sources */,
 				9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */,
 				8015777E29BF9E1C004C007F /* TeamListViewController.swift in Sources */,
 				9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */,
