@@ -14,6 +14,7 @@ class TeamMemberDetailViewController: UIViewController {
             teamMemberImageView.layer.cornerRadius = teamMemberImageView.frame.height / 2
         }
     }
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
