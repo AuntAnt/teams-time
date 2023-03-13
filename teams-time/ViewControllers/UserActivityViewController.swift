@@ -13,9 +13,7 @@ final class UserActivityViewController: UIViewController {
     @IBOutlet var currentTimeLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     
-    ///TODO: uncomment  variable and remove const, when can get User from Login Screen
-//    var user: TeamMember!
-    var user = TeamMember(name: "User", timezone: .dublin, contact: nil)
+    var user: TeamMember!
     
     override func viewDidLoad() {
         super.viewDidLoad()
