@@ -15,6 +15,8 @@
 		9B05C84029BA3A3E008B1D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B05C83F29BA3A3E008B1D08 /* Assets.xcassets */; };
 		9B05C84329BA3A3E008B1D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B05C84129BA3A3E008B1D08 /* LaunchScreen.storyboard */; };
 		9B05C84F29BA5792008B1D08 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C84E29BA5792008B1D08 /* TeamMember.swift */; };
+		9B05C85729BDD343008B1D08 /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B05C85629BDD343008B1D08 /* SettingsScreen.storyboard */; };
+		9B05C85929BDD520008B1D08 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C85829BDD520008B1D08 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9B05C84229BA3A3E008B1D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B05C84429BA3A3E008B1D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B05C84E29BA5792008B1D08 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
+		9B05C85629BDD343008B1D08 /* SettingsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
+		9B05C85829BDD520008B1D08 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				9B05C83C29BA3A3D008B1D08 /* Main.storyboard */,
 				9B05C84129BA3A3E008B1D08 /* LaunchScreen.storyboard */,
+				9B05C85629BDD343008B1D08 /* SettingsScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */,
+				9B05C85829BDD520008B1D08 /* SettingsViewController.swift */,
 				16E89FDA29BE017200B5B558 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -164,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B05C84329BA3A3E008B1D08 /* LaunchScreen.storyboard in Resources */,
+				9B05C85729BDD343008B1D08 /* SettingsScreen.storyboard in Resources */,
 				9B05C84029BA3A3E008B1D08 /* Assets.xcassets in Resources */,
 				9B05C83E29BA3A3D008B1D08 /* Main.storyboard in Resources */,
 			);
@@ -179,6 +186,7 @@
 				9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */,
 				9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */,
 				9B05C84F29BA5792008B1D08 /* TeamMember.swift in Sources */,
+				9B05C85929BDD520008B1D08 /* SettingsViewController.swift in Sources */,
 				16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */,
 				9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */,
 			);
