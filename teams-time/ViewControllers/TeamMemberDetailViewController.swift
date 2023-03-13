@@ -19,19 +19,22 @@ class TeamMemberDetailViewController: UIViewController {
     @IBOutlet var statusLabel: UILabel!
     @IBOutlet var currentTimeMember: UILabel!
     
-    var currentTeamMember = TeamMember(name: "User", timezone: .dublin, contact: nil)
+    var currentTeamMember: TeamMember!
     var currentStatus = Status.self
-
+    
+    
     @IBOutlet var contactButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         contactButton.layer.cornerRadius = 10
-
+        nameLabel.text = currentTeamMember.name
+        positionLabel.text = currentTeamMember.jobTitle
+        teamMemberImageView.image = UIImage(named: currentTeamMember.name)
     }
     
     @IBAction func contactButtonTapped() {
-        statusLabel.text == Status.active.rawValue
+        statusLabel.text == currentStatus.active.rawValue
             ? showContactAlert(
                 withtitle: "Please, contact with employee by telegram",
                 andmessage: "Nickname is \(currentTeamMember.contact ?? "")"
@@ -41,23 +44,6 @@ class TeamMemberDetailViewController: UIViewController {
                 andmessage: "You can`t contact with employee...🤷🏼"
             )
        }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let teamListVC = segue.destination as? TeamListViewController else { return }
-        
-        teamListVC.nameLabel = nameLabel
-    }
-    
-    
-    @IBAction func unwindTo(_ unwindSegue: UIStoryboardSegue) {
-        guard let teamListVC = unwindSegue.source as? TeamListViewController else { return }
-        
-        currentTeamMember.name = teamListVC.nameLabel.text!
-        currentTeamMember.jobTitle = teamListVC.positionLabel.text!
-        currentTeamMember.timezone = Timezone(rawValue: teamListVC.selectedTimeZone)!
-        UIImage(named: teamListVC.member.name)
-    }
-
 }
 
     extension TeamMemberDetailViewController {
