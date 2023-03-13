@@ -7,53 +7,55 @@
 
 import UIKit
 
-class TeamMemberDetailViewController: UIViewController {
+final class TeamMemberDetailViewController: UIViewController {
 
     @IBOutlet var teamMemberImageView: UIImageView! {
         didSet {
             teamMemberImageView.layer.cornerRadius = teamMemberImageView.frame.height / 2
         }
     }
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
-    @IBOutlet var currentTimeMember: UILabel!
-    
-    var currentTeamMember: TeamMember!
-    var currentStatus = Status.self
+    @IBOutlet var currentTimeLabel: UILabel!
     
     @IBOutlet var contactButton: UIButton!
+    
+    var teamMember: TeamMember!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         contactButton.layer.cornerRadius = 10
-        nameLabel.text = currentTeamMember.name
-        positionLabel.text = currentTeamMember.jobTitle
-        teamMemberImageView.image = UIImage(named: currentTeamMember.name)
+        teamMemberImageView.image = UIImage(named: teamMember.name)
+        
+        nameLabel.text = teamMember.name
+        positionLabel.text = teamMember.jobTitle
+        
+        ///TODO to change
+        statusLabel.text = Status.active.rawValue
+        currentTimeLabel.text = "03:39"
     }
     
     @IBAction func contactButtonTapped() {
-        statusLabel.text == currentStatus.active.rawValue
+        statusLabel.text == Status.active.rawValue
             ? showContactAlert(
-                withtitle: "Please, contact with employee by telegram",
-                andmessage: "Nickname is \(currentTeamMember.contact ?? "")"
+                with: "Please, contact with employee by telegram",
+                and: "Nickname is \(teamMember.contact ?? "")"
             )
             : showContactAlert(
-                withtitle: "Ooops! Employee is resting after work.",
-                andmessage: "You can`t contact with employee...🤷🏼"
+                with: "Ooops! Employee is resting after work.",
+                and: "You can`t contact with employee...🤷🏼"
             )
        }
 }
 
-    extension TeamMemberDetailViewController {
-        private func showContactAlert(withtitle title: String, andmessage message: String) {
-            let contactAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            present(contactAlert, animated: true)
-        }
+extension TeamMemberDetailViewController {
+    private func showContactAlert(with title: String, and message: String) {
+        let contactAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
         
+        contactAlert.addAction(okAction)
+        present(contactAlert, animated: true)
     }
-    
-
-
-
-
+}
