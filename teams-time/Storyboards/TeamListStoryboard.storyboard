@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="mFa-3f-p50" id="5Ru-8F-FHx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="TeamMembers" image="person.3.fill" catalog="system" id="1uL-td-jat"/>
+                    <tabBarItem key="tabBarItem" title="Your Team" image="person.3.fill" catalog="system" id="1uL-td-jat"/>
                     <navigationItem key="navigationItem" title="Team Members" id="nO3-Un-hXo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBR-0a-iYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,19 +93,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSP-G0-S1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3589" y="-144"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8UB-GQ-SjD">
-            <objects>
-                <navigationController id="b4d-CE-3on" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gpd-d2-1Tn">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LMe-Sr-nvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="334" y="23"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ayt-7v-jOh">

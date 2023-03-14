@@ -14,15 +14,16 @@ final class TeamMemberDetailViewController: UIViewController {
             teamMemberImageView.layer.cornerRadius = teamMemberImageView.frame.height / 2
         }
     }
+    @IBOutlet var contactButton: UIButton!
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     @IBOutlet var currentTimeLabel: UILabel!
     
-    @IBOutlet var contactButton: UIButton!
-    
     var teamMember: TeamMember!
+    
+    private let timeStatus = DefineTimeStatus()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,16 @@ final class TeamMemberDetailViewController: UIViewController {
         
         positionLabel.text = teamMember.jobTitle
         positionLabel.textColor = .systemGray
-
-        update(timeLabel: currentTimeLabel, statusLabel: statusLabel, for: teamMember)
+        
+        timeStatus.update(
+            timeLabel: currentTimeLabel,
+            statusLabel: statusLabel,
+            by: teamMember
+        )
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timeStatus.cancelTimer()
     }
     
     @IBAction func contactButtonTapped() {

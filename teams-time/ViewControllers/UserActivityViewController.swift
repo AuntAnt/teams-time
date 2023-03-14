@@ -14,12 +14,14 @@ final class UserActivityViewController: UIViewController {
     @IBOutlet var statusLabel: UILabel!
     
     var user: TeamMember!
+    private var timeStatus: DefineTimeStatus!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userNameLabel.text = user.name
-        updateTime()
+        timeStatus = DefineTimeStatus()
+        timeStatus.update(timeLabel: currentTimeLabel, statusLabel: statusLabel, by: user)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,55 +32,14 @@ final class UserActivityViewController: UIViewController {
     
     @IBAction func unwindTo(_ unwindSegue: UIStoryboardSegue) {
         guard let settingsVC = unwindSegue.source as? SettingsViewController else { return }
+        timeStatus.cancelTimer()
         
         user.name = settingsVC.nameTextField.text!
         user.timezone = Timezone(rawValue: settingsVC.selectedTimeZone)!
         
         userNameLabel.text = user.name
-    }
-    
-    //MARK: - private methods
-    private func updateTime() {
-        let date = Date.now
         
-        let timer = Timer(
-            fireAt: date,
-            interval: 1,
-            target: self,
-            selector: #selector(setCurrentTime),
-            userInfo: nil,
-            repeats: true
-        )
-        
-        RunLoop.main.add(timer, forMode: .common)
-    }
-    
-    @objc private func setCurrentTime() {
-        currentTimeLabel.text = getCurrentTime()
-
-        defineStatus()
-    }
-    
-    private func getCurrentTime() -> String {
-        let formatter = DateFormatter()
-        
-        formatter.timeZone = TimeZone(identifier: user.timezone.rawValue)
-        formatter.dateFormat = "HH:mm:ss"
-        
-        return formatter.string(from: Date())
-    }
-    
-    private func defineStatus() {
-        let currentHour = currentTimeLabel.text?.components(separatedBy: ":").first ?? ""
-        
-        guard let hour = Int(currentHour) else { return }
-        
-        if (user.workingTime.from..<user.workingTime.to).contains(hour) {
-            statusLabel.text = Status.active.rawValue
-            statusLabel.textColor = .systemGreen
-        } else {
-            statusLabel.text = Status.inactive.rawValue
-            statusLabel.textColor = .systemRed
-        }
+        timeStatus = DefineTimeStatus()
+        timeStatus.update(timeLabel: currentTimeLabel, statusLabel: statusLabel, by: user)
     }
 }

@@ -88,7 +88,7 @@
 		9B05C83529BA3A3D008B1D08 /* teams-time */ = {
 			isa = PBXGroup;
 			children = (
-				9B92F26C29C0426E00078F1C /* Extensions */,
+				9B92F26C29C0426E00078F1C /* Helpers */,
 				8015777829BF9C54004C007F /* Views */,
 				9B05C84D29BA3B0B008B1D08 /* Models */,
 				9B05C84C29BA3AFB008B1D08 /* ViewControllers */,
@@ -143,12 +143,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9B92F26C29C0426E00078F1C /* Extensions */ = {
+		9B92F26C29C0426E00078F1C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				9B92F26F29C0467F00078F1C /* TimeStatus.swift */,
 			);
-			path = Extensions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

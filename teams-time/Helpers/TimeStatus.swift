@@ -7,13 +7,15 @@
 
 import UIKit
 
-//MARK: - Extension for updating time and status
-extension UIViewController {
+//MARK: - Helper class for updating time and status
+final class DefineTimeStatus {
     
-    func update(timeLabel: UILabel, statusLabel: UILabel, for teamMember: TeamMember) {
+    private var timer: Timer!
+    
+    func update(timeLabel: UILabel, statusLabel: UILabel, by teamMember: TeamMember) {
         let date = Date.now
 
-        let timer = Timer(
+        timer = Timer(
             fireAt: date,
             interval: 1,
             target: self,
@@ -27,6 +29,11 @@ extension UIViewController {
         )
 
         RunLoop.main.add(timer, forMode: .common)
+    }
+    
+    func cancelTimer() {
+        timer?.invalidate()
+        timer = nil
     }
 
     @objc private func setCurrentTime(sender: Timer) {
