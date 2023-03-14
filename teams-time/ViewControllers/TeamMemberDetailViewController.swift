@@ -27,7 +27,7 @@ final class TeamMemberDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contactButton.layer.cornerRadius = 10
-        teamMemberImageView.image = UIImage(named: teamMember.name)
+        teamMemberImageView.image = UIImage(named: teamMember.name.lowercased())
         
         nameLabel.text = teamMember.name
         positionLabel.text = teamMember.jobTitle
