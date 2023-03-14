@@ -386,6 +386,7 @@
 				DEVELOPMENT_TEAM = 82LJBH6Q35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "teams-time/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Team's Time";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -418,6 +419,7 @@
 				DEVELOPMENT_TEAM = 82LJBH6Q35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "teams-time/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Team's Time";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
