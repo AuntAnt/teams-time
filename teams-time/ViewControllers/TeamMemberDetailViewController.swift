@@ -30,7 +30,9 @@ final class TeamMemberDetailViewController: UIViewController {
         teamMemberImageView.image = UIImage(named: teamMember.name)
         
         nameLabel.text = teamMember.name
+        
         positionLabel.text = teamMember.jobTitle
+        positionLabel.textColor = .systemGray
 
         update(timeLabel: currentTimeLabel, statusLabel: statusLabel, for: teamMember)
     }

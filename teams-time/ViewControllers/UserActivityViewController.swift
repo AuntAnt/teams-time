@@ -73,10 +73,12 @@ final class UserActivityViewController: UIViewController {
         
         guard let hour = Int(currentHour) else { return }
         
-        if (user.workingTime.from...user.workingTime.to).contains(hour) {
+        if (user.workingTime.from..<user.workingTime.to).contains(hour) {
             statusLabel.text = Status.active.rawValue
+            statusLabel.textColor = .systemGreen
         } else {
             statusLabel.text = Status.inactive.rawValue
+            statusLabel.textColor = .systemRed
         }
     }
 }

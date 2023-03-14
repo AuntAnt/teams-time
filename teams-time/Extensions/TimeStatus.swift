@@ -42,7 +42,11 @@ extension UIViewController {
         }
 
         if let statusLabel = userInfo["statusLabel"] as? UILabel {
-            statusLabel.text = defineStatus(currentHour: currentHour, teamMember: teamMember)
+            let status = defineStatus(currentHour: currentHour, teamMember: teamMember)
+            statusLabel.text = status
+            statusLabel.textColor = status == Status.active.rawValue
+            ? .systemGreen
+            : .systemRed
         }
     }
 
@@ -58,7 +62,7 @@ extension UIViewController {
     private func defineStatus(currentHour: String, teamMember: TeamMember) -> String {
         guard let hour = Int(currentHour) else { return ""}
 
-        return (teamMember.workingTime.from...teamMember.workingTime.to).contains(hour)
+        return (teamMember.workingTime.from..<teamMember.workingTime.to).contains(hour)
         ? Status.active.rawValue
         : Status.inactive.rawValue
     }
