@@ -31,7 +31,7 @@ extension TeamListViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "member", for: indexPath) as! MemberCell
         let member = teamMembers[indexPath.section]
-        cell.memberImageView.image = UIImage(named: member.name.lowercased())
+        cell.memberImageView.image = UIImage(named: member.name)
         cell.memberImageView.layer.cornerRadius = cell.memberImageView.frame.width / 2
         cell.nameLabel.text = member.name
         cell.positionLabel.text = member.jobTitle
