@@ -20,6 +20,11 @@ final class UserActivityViewController: UIViewController {
         
         userNameLabel.text = user.name
         updateTime()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.orange.cgColor]
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

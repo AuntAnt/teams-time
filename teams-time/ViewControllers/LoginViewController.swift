@@ -22,6 +22,11 @@ final class LoginViewController: UIViewController {
         timeZonePicker?.dataSource = self
         timeZonePicker?.delegate = self
         
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.orange.cgColor]
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    
         loginButton.layer.cornerRadius = 8
     }
 
@@ -36,6 +41,7 @@ final class LoginViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+    
     
     @IBAction func logInPressed() {
         guard let userName = userNameTextField.text else { return }
