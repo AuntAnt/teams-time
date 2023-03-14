@@ -31,10 +31,8 @@ final class TeamMemberDetailViewController: UIViewController {
         
         nameLabel.text = teamMember.name
         positionLabel.text = teamMember.jobTitle
-        
-        ///TODO to change
-        statusLabel.text = Status.active.rawValue
-        currentTimeLabel.text = "03:39"
+
+        update(timeLabel: currentTimeLabel, statusLabel: statusLabel, for: teamMember)
     }
     
     @IBAction func contactButtonTapped() {
