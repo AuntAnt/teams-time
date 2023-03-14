@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-Mg-Ftu">
-                                <rect key="frame" x="87" y="74" width="240" height="240"/>
+                                <rect key="frame" x="87" y="30" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="5Xo-FI-CvV"/>
                                     <constraint firstAttribute="width" secondItem="iTp-Mg-Ftu" secondAttribute="height" multiplier="1:1" id="uiR-83-79D"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="vXn-R5-BgL">
-                                <rect key="frame" x="86" y="344" width="242" height="204.33333333333337"/>
+                                <rect key="frame" x="86" y="300" width="242" height="204.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qon-ae-stI">
                                         <rect key="frame" x="0.0" y="0.0" width="242" height="138"/>
@@ -101,42 +101,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM1-a1-EGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1194.375" y="-323.23943661971833"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="trw-sL-Id4">
-            <objects>
-                <tabBarController id="NLQ-0C-1D4" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K8O-9z-AG9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="goP-cX-rlZ" kind="relationship" relationship="viewControllers" id="Tf3-XO-2Ga"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E4C-u7-umd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-682" y="-20"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="fCI-9G-ir4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="goP-cX-rlZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="hfN-Pl-BYt"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="civ-az-ccr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VO8-zY-X0F" kind="relationship" relationship="rootViewController" id="FwW-NK-Tec"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wCE-rB-egm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="196.875" y="-323.23943661971833"/>
         </scene>
     </scenes>
     <resources>
