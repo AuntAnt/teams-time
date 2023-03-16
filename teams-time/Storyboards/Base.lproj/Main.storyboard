@@ -115,11 +115,11 @@
             </objects>
             <point key="canvasLocation" x="1" y="477"/>
         </scene>
-        <!--Item-->
+        <!--Your Activity-->
         <scene sceneID="wxu-Lh-Hqh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="igD-qK-Bph" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="18I-0Q-exn"/>
+                    <tabBarItem key="tabBarItem" title="Your Activity" image="person" catalog="system" id="18I-0Q-exn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zTq-Pe-rwb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
