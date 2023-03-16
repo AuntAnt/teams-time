@@ -119,7 +119,7 @@
         <scene sceneID="wxu-Lh-Hqh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="igD-qK-Bph" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Activity" image="person" catalog="system" id="18I-0Q-exn"/>
+                    <tabBarItem key="tabBarItem" title="Your Activity" image="person.fill" catalog="system" id="18I-0Q-exn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zTq-Pe-rwb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -137,7 +137,7 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

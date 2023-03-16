@@ -36,7 +36,6 @@ final class LoginViewController: UIViewController {
                 }
                 userVC.user = user
             }
-        
         }
     }
     
