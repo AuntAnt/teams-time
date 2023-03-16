@@ -27,9 +27,17 @@ final class LoginViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? TabBarViewController else { return }
-        guard let mainVC = tabBarVC.viewControllers?.first as? UserActivityViewController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
         
-        mainVC.user = user
+        for viewController in viewControllers {
+            if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserActivityViewController else {
+                    return
+                }
+                userVC.user = user
+            }
+        
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

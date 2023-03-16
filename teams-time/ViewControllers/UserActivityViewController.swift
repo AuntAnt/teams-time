@@ -18,7 +18,7 @@ final class UserActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "User Activity"
         userNameLabel.text = user.name
         timeStatus = DefineTimeStatus()
         timeStatus.update(timeLabel: currentTimeLabel, statusLabel: statusLabel, by: user)
