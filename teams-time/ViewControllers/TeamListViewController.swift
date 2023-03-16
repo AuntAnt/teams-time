@@ -51,3 +51,10 @@ extension TeamListViewController {
         0
     }
 }
+
+//MARK: - UITableViewDelegate
+extension TeamListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}

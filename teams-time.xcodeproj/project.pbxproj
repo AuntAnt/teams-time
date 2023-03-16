@@ -112,9 +112,9 @@
 		9B05C84B29BA3AEB008B1D08 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				9B05C84129BA3A3E008B1D08 /* LaunchScreen.storyboard */,
 				9B3B2B7029BFB3EE00D3B907 /* LoginStoryboard.storyboard */,
 				9B05C83C29BA3A3D008B1D08 /* Main.storyboard */,
-				9B05C84129BA3A3E008B1D08 /* LaunchScreen.storyboard */,
 				9B05C85629BDD343008B1D08 /* SettingsScreen.storyboard */,
 				8015777B29BF9C7E004C007F /* TeamListStoryboard.storyboard */,
 				C8CE3A6B29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard */,
@@ -126,10 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				9B3B2B6E29BFB3E400D3B907 /* LoginViewController.swift */,
+				16E89FDA29BE017200B5B558 /* TabBarViewController.swift */,
 				9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */,
 				8015777D29BF9E1C004C007F /* TeamListViewController.swift */,
 				9B05C85829BDD520008B1D08 /* SettingsViewController.swift */,
-				16E89FDA29BE017200B5B558 /* TabBarViewController.swift */,
 				C8CE3A6329BF69A0003D8362 /* TeamMemberDetailViewController.swift */,
 			);
 			path = ViewControllers;
