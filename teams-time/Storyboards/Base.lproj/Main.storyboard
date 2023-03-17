@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,17 +14,17 @@
             <objects>
                 <viewController storyboardIdentifier="mainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="UserActivityViewController" customModule="teams_time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-Pi-3Qc">
-                                <rect key="frame" x="77" y="211" width="166" height="146"/>
+                                <rect key="frame" x="132" y="346.33333333333331" width="166" height="239.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-5Y-arV">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="118.66666666666667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8g-JI-bS9">
-                                                <rect key="frame" x="0.0" y="0.0" width="166" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="166" height="118.66666666666667"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -34,7 +35,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-dm-aQQ">
-                                        <rect key="frame" x="0.0" y="74" width="166" height="72"/>
+                                        <rect key="frame" x="0.0" y="120.66666666666669" width="166" height="118.66666666666669"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -42,7 +43,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-z2-EAz">
-                                <rect key="frame" x="16" y="143" width="288" height="48"/>
+                                <rect key="frame" x="16" y="278.33333333333331" width="398" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344" y="27"/>
+            <point key="canvasLocation" x="2014" y="-2"/>
         </scene>
         <!--settingsStoryboard-->
         <scene sceneID="NjO-2p-AJ7">
@@ -84,7 +85,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gp7-BA-Bsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966" y="26"/>
+            <point key="canvasLocation" x="2833" y="-15"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="80s-20-hAp">
@@ -99,6 +100,7 @@
                     <connections>
                         <segue destination="igD-qK-Bph" kind="relationship" relationship="viewControllers" id="A9h-eL-iqm"/>
                         <segue destination="lw6-PN-ueh" kind="relationship" relationship="viewControllers" id="m9t-BZ-0Zi"/>
+                        <segue destination="pal-km-7T0" kind="relationship" relationship="viewControllers" id="YP8-ah-yZx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1b-ul-343" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,7 +115,64 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dov-op-zVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="477"/>
+            <point key="canvasLocation" x="46" y="489"/>
+        </scene>
+        <!--Pomodoro-->
+        <scene sceneID="Qtv-D1-wd5">
+            <objects>
+                <viewController id="xVI-rY-hKZ" customClass="FocusViewController" customModule="teams_time" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9x3-iD-glU">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pomodoro" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-tX-Pdp">
+                                <rect key="frame" x="102.66666666666669" y="163" width="225" height="225"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-Zt-af7">
+                                <rect key="frame" x="157.33333333333334" y="428" width="115.33333333333334" height="52.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="xIg-HS-oRc">
+                                <rect key="frame" x="40" y="774.66666666666663" width="350" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-q8-mMq">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start">
+                                            <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-me-SPk">
+                                        <rect key="frame" x="186.66666666666663" y="0.0" width="163.33333333333337" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Pause">
+                                            <imageReference key="image" image="pause.circle" catalog="system" symbolScale="large"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EwZ-fG-cfN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xIg-HS-oRc" firstAttribute="leading" secondItem="EwZ-fG-cfN" secondAttribute="leading" constant="40" id="D5d-Cf-2by"/>
+                            <constraint firstItem="cGH-tX-Pdp" firstAttribute="top" secondItem="EwZ-fG-cfN" secondAttribute="top" constant="60" id="b9u-dc-gmK"/>
+                            <constraint firstItem="EwZ-fG-cfN" firstAttribute="bottom" secondItem="xIg-HS-oRc" secondAttribute="bottom" constant="40" id="bq1-gv-lrm"/>
+                            <constraint firstItem="EwZ-fG-cfN" firstAttribute="trailing" secondItem="xIg-HS-oRc" secondAttribute="trailing" constant="40" id="cxe-ZB-vZ7"/>
+                            <constraint firstItem="cGH-tX-Pdp" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="gVe-A2-0FD"/>
+                            <constraint firstItem="UZV-Zt-af7" firstAttribute="top" secondItem="cGH-tX-Pdp" secondAttribute="bottom" constant="40" id="t2b-Ux-Ayq"/>
+                            <constraint firstItem="UZV-Zt-af7" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="zHD-Iw-Qze"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pomodoro" id="kKb-2Q-VJq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAd-bZ-M91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2154.375" y="772.18309859154931"/>
         </scene>
         <!--Your Activity-->
         <scene sceneID="wxu-Lh-Hqh">
@@ -122,7 +181,7 @@
                     <tabBarItem key="tabBarItem" title="Your Activity" image="person.fill" catalog="system" id="18I-0Q-exn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zTq-Pe-rwb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -134,10 +193,33 @@
             </objects>
             <point key="canvasLocation" x="1156.875" y="-2.112676056338028"/>
         </scene>
+        <!--Focus-->
+        <scene sceneID="KtM-pY-FTp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pal-km-7T0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Focus" image="cursorarrow.click.badge.clock" catalog="system" id="9Kn-Kk-pbz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVR-Gs-ZIl">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xVI-rY-hKZ" kind="relationship" relationship="rootViewController" id="v3J-8N-Uc0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zs7-Gz-T4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156.875" y="772.18309859154931"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="cursorarrow.click.badge.clock" catalog="system" width="120" height="128"/>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="pause.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.circle" catalog="system" width="128" height="123"/>
+        <image name="pomodoro" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

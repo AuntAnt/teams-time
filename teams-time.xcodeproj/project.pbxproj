@@ -11,6 +11,7 @@
 		8015777A29BF9C55004C007F /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015777929BF9C54004C007F /* MemberCell.swift */; };
 		8015777C29BF9C7E004C007F /* TeamListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8015777B29BF9C7E004C007F /* TeamListStoryboard.storyboard */; };
 		8015777E29BF9E1C004C007F /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015777D29BF9E1C004C007F /* TeamListViewController.swift */; };
+		802BB09D29C46865004AA404 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802BB09C29C46865004AA404 /* FocusViewController.swift */; };
 		9B05C83729BA3A3D008B1D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83629BA3A3D008B1D08 /* AppDelegate.swift */; };
 		9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83829BA3A3D008B1D08 /* SceneDelegate.swift */; };
 		9B05C83B29BA3A3D008B1D08 /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05C83A29BA3A3D008B1D08 /* UserActivityViewController.swift */; };
@@ -32,6 +33,7 @@
 		8015777929BF9C54004C007F /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		8015777B29BF9C7E004C007F /* TeamListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeamListStoryboard.storyboard; sourceTree = "<group>"; };
 		8015777D29BF9E1C004C007F /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		802BB09C29C46865004AA404 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		9B05C83329BA3A3D008B1D08 /* teams-time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teams-time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B05C83629BA3A3D008B1D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B05C83829BA3A3D008B1D08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				8015777D29BF9E1C004C007F /* TeamListViewController.swift */,
 				9B05C85829BDD520008B1D08 /* SettingsViewController.swift */,
 				C8CE3A6329BF69A0003D8362 /* TeamMemberDetailViewController.swift */,
+				802BB09C29C46865004AA404 /* FocusViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				9B05C84F29BA5792008B1D08 /* TeamMember.swift in Sources */,
 				9B05C85929BDD520008B1D08 /* SettingsViewController.swift in Sources */,
 				8015777A29BF9C55004C007F /* MemberCell.swift in Sources */,
+				802BB09D29C46865004AA404 /* FocusViewController.swift in Sources */,
 				16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */,
 				9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */,
 				9B92F27029C0467F00078F1C /* TimeStatus.swift in Sources */,
