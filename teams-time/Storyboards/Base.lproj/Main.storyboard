@@ -127,13 +127,11 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pomodoro" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-tX-Pdp">
                                 <rect key="frame" x="102.66666666666669" y="163" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="XWJ-wF-tru"/>
+                                    <constraint firstAttribute="width" constant="225" id="ZlG-mM-8f3"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-Zt-af7">
-                                <rect key="frame" x="157.33333333333334" y="428" width="115.33333333333334" height="52.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="xIg-HS-oRc">
                                 <rect key="frame" x="40" y="774.66666666666663" width="350" height="34.333333333333371"/>
                                 <subviews>
@@ -144,6 +142,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Start">
                                             <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startButtonPressed" destination="xVI-rY-hKZ" eventType="touchUpInside" id="bgA-Q1-jJ8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-me-SPk">
                                         <rect key="frame" x="186.66666666666663" y="0.0" width="163.33333333333337" height="34.333333333333336"/>
@@ -152,9 +153,18 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Pause">
                                             <imageReference key="image" image="pause.circle" catalog="system" symbolScale="large"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pauseButtonPressed" destination="xVI-rY-hKZ" eventType="touchUpInside" id="8oS-0z-FUT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-Zt-af7">
+                                <rect key="frame" x="60" y="422" width="310" height="52.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EwZ-fG-cfN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -162,13 +172,19 @@
                             <constraint firstItem="xIg-HS-oRc" firstAttribute="leading" secondItem="EwZ-fG-cfN" secondAttribute="leading" constant="40" id="D5d-Cf-2by"/>
                             <constraint firstItem="cGH-tX-Pdp" firstAttribute="top" secondItem="EwZ-fG-cfN" secondAttribute="top" constant="60" id="b9u-dc-gmK"/>
                             <constraint firstItem="EwZ-fG-cfN" firstAttribute="bottom" secondItem="xIg-HS-oRc" secondAttribute="bottom" constant="40" id="bq1-gv-lrm"/>
+                            <constraint firstItem="UZV-Zt-af7" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="c11-ha-SGS"/>
                             <constraint firstItem="EwZ-fG-cfN" firstAttribute="trailing" secondItem="xIg-HS-oRc" secondAttribute="trailing" constant="40" id="cxe-ZB-vZ7"/>
                             <constraint firstItem="cGH-tX-Pdp" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="gVe-A2-0FD"/>
-                            <constraint firstItem="UZV-Zt-af7" firstAttribute="top" secondItem="cGH-tX-Pdp" secondAttribute="bottom" constant="40" id="t2b-Ux-Ayq"/>
-                            <constraint firstItem="UZV-Zt-af7" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="zHD-Iw-Qze"/>
+                            <constraint firstItem="UZV-Zt-af7" firstAttribute="width" secondItem="9x3-iD-glU" secondAttribute="width" multiplier="0.72093" id="p6i-bv-pA9"/>
+                            <constraint firstItem="UZV-Zt-af7" firstAttribute="top" secondItem="cGH-tX-Pdp" secondAttribute="bottom" constant="34" id="wpX-c4-QGj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pomodoro" id="kKb-2Q-VJq"/>
+                    <connections>
+                        <outlet property="pauseButton" destination="0GM-me-SPk" id="cCQ-jU-ZWs"/>
+                        <outlet property="startButton" destination="Sc5-q8-mMq" id="mMI-3c-mGn"/>
+                        <outlet property="timerLabel" destination="UZV-Zt-af7" id="lgO-h5-slW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAd-bZ-M91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
