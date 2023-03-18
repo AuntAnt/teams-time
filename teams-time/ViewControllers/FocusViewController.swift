@@ -15,7 +15,7 @@ final class FocusViewController: UIViewController {
     @IBOutlet var pauseButton: UIButton!
     
     
-    private var timeRemaining = 1 * 60
+    private var timeRemaining = 25 * 60
     private var pauseRemaining = 0 * 60
     private var timer: Timer!
     private var timerStarted = false
@@ -25,28 +25,35 @@ final class FocusViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed() {
+        startButton.setTitle("restart", for: .normal)
+        pauseButton.setTitle("pause", for: .normal)
         if !timerStarted {
-            timer = Timer.scheduledTimer(
-                withTimeInterval: 1,
-                repeats: true,
-                block: { [weak self] timer in
-                    self?.updateTimer()
-                }
-            )
+            updateTimer()
+            runTimer()
+        } else {
+            timer.invalidate()
+            timeRemaining = 25 * 60
+            updateTimer()
+            runTimer()
         }
     }
     
     @IBAction func pauseButtonPressed() {
-        if timer != nil {
+        if timerStarted {
             timer.invalidate()
-            startButton.setTitle("Resume", for: .normal)
             timerStarted = false
+            pauseButton.setTitle("resume", for: .normal)
+        } else {
+            updateTimer()
+            runTimer()
+            pauseButton.setTitle("pause", for: .normal)
         }
     }
     
 }
 
 private extension FocusViewController {
+    
     func updateTimer() {
         if timeRemaining > 0 {
             
@@ -64,6 +71,15 @@ private extension FocusViewController {
             timer = nil
             timerStarted = false
         }
+    }
+    func runTimer() {
+        timer = Timer.scheduledTimer(
+            withTimeInterval: 1,
+            repeats: true,
+            block: { [weak self] timer in
+                self?.updateTimer()
+            }
+        )
         
     }
 }
