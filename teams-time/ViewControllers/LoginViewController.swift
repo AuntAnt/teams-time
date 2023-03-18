@@ -51,23 +51,11 @@ final class LoginViewController: UIViewController {
         user = TeamMember(name: userName, timezone: selectedTimezone, contact: nil)
         
         if userNameTextField.text == "" {
-            showAlert(
-                title: "Required field is empty",
-                message: "Please, enter your name",
-                textField: userNameTextField
-            )
+            showAlert(with: "Required field is empty", and: "Please, enter your name")
         } else {
             performSegue(withIdentifier: "openMainVC", sender: nil)
         }
     }
-    
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
 }
 
 extension LoginViewController: UIPickerViewDataSource, UIPickerViewDelegate {
