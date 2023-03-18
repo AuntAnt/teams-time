@@ -19,10 +19,9 @@ final class FocusViewController: UIViewController {
     private var pauseRemaining = 0 * 60
     private var timer: Timer!
     private var timerStarted = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func startButtonPressed() {
