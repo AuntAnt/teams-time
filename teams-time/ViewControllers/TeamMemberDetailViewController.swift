@@ -47,24 +47,23 @@ final class TeamMemberDetailViewController: UIViewController {
     }
     
     @IBAction func contactButtonTapped() {
-        statusLabel.text == Status.active.rawValue
-            ? showContactAlert(
-                with: "Please, contact with employee by telegram",
-                and: "Nickname is \(teamMember.contact ?? "")"
+        if statusLabel.text != Status.active.rawValue {
+            showAlert(
+                with: "\(teamMember.name) is currently inactive",
+                and: "Please, try to contact with \(teamMember.name) during their working time"
             )
-            : showContactAlert(
-                with: "Ooops! Employee is resting after work.",
-                and: "You can`t contact with employee...🤷🏼"
-            )
-       }
-}
-
-extension TeamMemberDetailViewController {
-    private func showContactAlert(with title: String, and message: String) {
-        let contactAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        
-        contactAlert.addAction(okAction)
-        present(contactAlert, animated: true)
-    }
+        } else {
+            guard let contact = teamMember.contact else {
+                showAlert(
+                    with: "No contact",
+                    and: "\(teamMember.name) did not give his contact."
+                )
+                return
+            }
+            
+            guard let url = URL(string: "tg://resolve?domain=\(contact)") else { return }
+            
+            UIApplication.shared.open(url)
+        }
+   }
 }

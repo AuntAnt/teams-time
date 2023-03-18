@@ -28,7 +28,7 @@ struct TeamMember {
     static func getMembers() -> [TeamMember] {
         [
           TeamMember(name: "Anton", jobTitle: "iOS Developer", timezone: .samara, contact: "@auntant"),
-          TeamMember(name: "Bektemur", jobTitle: "iOS Developer", timezone: .tashkent, contact: "bektemur07"),
+          TeamMember(name: "Bektemur", jobTitle: "iOS Developer", timezone: .tashkent, contact: "@bektemur_07"),
           TeamMember(name: "Aigiz", jobTitle: "iOS Developer", timezone: .dublin, contact: "@iGiz_13"),
           TeamMember(name: "Ilya", jobTitle: "iOS Developer", timezone: .minsk, contact: "@ilyastratovich"),
           TeamMember(name: "Anna", jobTitle: "iOS Developer", timezone: .samara, contact: "@belikovanna")
