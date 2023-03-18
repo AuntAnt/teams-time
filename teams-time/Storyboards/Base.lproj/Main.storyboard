@@ -125,15 +125,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-q8-mMq">
+                                <rect key="frame" x="50" y="727.66666666666663" width="87" height="34.333333333333371"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="xVI-rY-hKZ" eventType="touchUpInside" id="bgA-Q1-jJ8"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="pwC-gD-XYx">
-                                <rect key="frame" x="89" y="547" width="215" height="187"/>
+                                <rect key="frame" x="138.66666666666666" y="573.33333333333337" width="116" height="45.666666666666629"/>
                                 <subviews>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Eb-o13">
-                                        <rect key="frame" x="49.666666666666657" y="0.0" width="116" height="52.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="45.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-Zt-af7">
-                                                <rect key="frame" x="0.0" y="0.0" width="116" height="52.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="45.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -142,33 +153,6 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="116" id="7KV-gz-hLk"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="xIg-HS-oRc">
-                                        <rect key="frame" x="0.0" y="152.66666666666663" width="215" height="34.333333333333343"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-q8-mMq">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="34.333333333333336"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Start">
-                                                    <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="startButtonPressed" destination="xVI-rY-hKZ" eventType="touchUpInside" id="bgA-Q1-jJ8"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-me-SPk">
-                                                <rect key="frame" x="119" y="0.0" width="96" height="34.333333333333336"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Pause">
-                                                    <imageReference key="image" image="pause.circle" catalog="system" symbolScale="large"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="pauseButtonPressed" destination="xVI-rY-hKZ" eventType="touchUpInside" id="8oS-0z-FUT"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -179,14 +163,30 @@
                                     <constraint firstAttribute="width" constant="200" id="mxI-FK-8CB"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-me-SPk">
+                                <rect key="frame" x="247" y="727.66666666666663" width="96" height="34.333333333333371"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause">
+                                    <imageReference key="image" image="pause.circle" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pauseButtonPressed" destination="xVI-rY-hKZ" eventType="touchUpInside" id="8oS-0z-FUT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EwZ-fG-cfN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cGH-tX-Pdp" firstAttribute="top" secondItem="EwZ-fG-cfN" secondAttribute="top" constant="30" id="0eJ-3E-is2"/>
-                            <constraint firstItem="EwZ-fG-cfN" firstAttribute="bottom" secondItem="pwC-gD-XYx" secondAttribute="bottom" constant="35" id="Rgc-xi-pus"/>
+                            <constraint firstAttribute="bottom" secondItem="0GM-me-SPk" secondAttribute="bottom" constant="90" id="Ax1-pZ-r1M"/>
+                            <constraint firstItem="EwZ-fG-cfN" firstAttribute="trailing" secondItem="0GM-me-SPk" secondAttribute="trailing" constant="50" id="ICU-KN-ylf"/>
+                            <constraint firstItem="EwZ-fG-cfN" firstAttribute="bottom" secondItem="pwC-gD-XYx" secondAttribute="bottom" constant="150" id="Rgc-xi-pus"/>
                             <constraint firstItem="pwC-gD-XYx" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="V81-kw-D5e"/>
                             <constraint firstItem="cGH-tX-Pdp" firstAttribute="centerX" secondItem="9x3-iD-glU" secondAttribute="centerX" id="gVe-A2-0FD"/>
+                            <constraint firstAttribute="bottom" secondItem="Sc5-q8-mMq" secondAttribute="bottom" constant="90" id="ggn-0w-vYX"/>
+                            <constraint firstItem="0GM-me-SPk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sc5-q8-mMq" secondAttribute="trailing" constant="8" symbolic="YES" id="nhP-7d-tFs"/>
+                            <constraint firstItem="Sc5-q8-mMq" firstAttribute="leading" secondItem="EwZ-fG-cfN" secondAttribute="leading" constant="50" id="w81-Le-Rgn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pomodoro" id="kKb-2Q-VJq"/>
