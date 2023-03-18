@@ -58,7 +58,7 @@ private extension FocusViewController {
             timeRemaining -= 1
             let minutes = timeRemaining / 60
             let seconds = timeRemaining % 60
-            let timeString = String(format: "  %02d:%02d  ", minutes, seconds)
+            let timeString = String(format: "%02d:%02d", minutes, seconds)
             timerLabel.text = timeString
         } else {
             timer.invalidate()
