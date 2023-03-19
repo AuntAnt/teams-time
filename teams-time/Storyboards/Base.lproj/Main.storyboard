@@ -126,10 +126,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-q8-mMq">
-                                <rect key="frame" x="50" y="727.66666666666663" width="87" height="34.333333333333371"/>
+                                <rect key="frame" x="50" y="727.66666666666663" width="85" height="34.333333333333371"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                <buttonConfiguration key="configuration" style="plain" title="start">
                                     <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
                                 <connections>
