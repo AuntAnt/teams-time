@@ -99,8 +99,8 @@
                 <navigationController storyboardIdentifier="TeamList" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fp0-Cc-9P4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Your Team" image="person.3.fill" catalog="system" id="1uL-td-jat"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vZI-q8-UYP">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZI-q8-UYP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
