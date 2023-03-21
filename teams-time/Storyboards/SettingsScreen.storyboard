@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fmp-B3-Lkg" userLabel="Name Stack View">
-                                <rect key="frame" x="16" y="70" width="288" height="34"/>
+                                <rect key="frame" x="16" y="114" width="288" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-Jy-iLI">
                                         <rect key="frame" x="0.0" y="0.0" width="52.5" height="34"/>
@@ -33,7 +33,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SS4-8O-OYf" userLabel="Timezone Stack View">
-                                <rect key="frame" x="0.0" y="144" width="320" height="242.5"/>
+                                <rect key="frame" x="0.0" y="188" width="320" height="242.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timezone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-mY-Iay">
                                         <rect key="frame" x="111" y="0.0" width="98.5" height="26.5"/>
@@ -46,47 +46,30 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="utJ-OM-DyV">
-                                <rect key="frame" x="16" y="457" width="288" height="91"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibt-qc-M9a">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="41.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Save">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="saveButtonPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xQa-VO-aBJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-B0-wOb">
-                                        <rect key="frame" x="0.0" y="49.5" width="288" height="41.5"/>
-                                        <color key="tintColor" systemColor="systemRedColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Cancel">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="cancelButtonPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MzK-G4-HjF"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fmp-B3-Lkg" secondAttribute="trailing" constant="16" id="Fuh-RO-ZQ6"/>
-                            <constraint firstItem="utJ-OM-DyV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="OHr-iN-cr3"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="utJ-OM-DyV" secondAttribute="bottom" constant="20" id="RdU-yu-l0g"/>
                             <constraint firstItem="Fmp-B3-Lkg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="U3e-NY-Yfa"/>
                             <constraint firstItem="SS4-8O-OYf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fOx-uW-dic"/>
                             <constraint firstItem="SS4-8O-OYf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fR6-Az-gzE"/>
                             <constraint firstItem="Fmp-B3-Lkg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="70" id="g4Z-s4-alC"/>
                             <constraint firstItem="SS4-8O-OYf" firstAttribute="top" secondItem="Fmp-B3-Lkg" secondAttribute="bottom" constant="40" id="ro6-8e-Gvy"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="utJ-OM-DyV" secondAttribute="trailing" constant="16" id="zSn-Sb-e4p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TLu-LI-kH5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1TY-98-cit">
+                            <connections>
+                                <action selector="cancelBarButtonPressed:" destination="Y6W-OH-hqX" id="eFE-C1-Pa7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="h0U-te-2Pe">
+                            <connections>
+                                <action selector="saveBarButtonPressed:" destination="Y6W-OH-hqX" id="Lb7-Uo-2o2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="Pve-2F-TIy" id="trK-3Y-z7I"/>
                         <outlet property="timezonePicker" destination="leG-4n-dmr" id="B71-Sb-IOF"/>
@@ -96,15 +79,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mY6-xZ-FmM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1358" y="-63"/>
+            <point key="canvasLocation" x="-361.875" y="-63.380281690140848"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VE2-mm-iOX">
+            <objects>
+                <navigationController storyboardIdentifier="navController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gaw-Z2-nvp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e1C-11-H5a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="TZB-GI-fbT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grq-MX-iuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1359.375" y="-63.380281690140848"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

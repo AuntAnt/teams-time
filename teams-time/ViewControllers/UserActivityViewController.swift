@@ -25,7 +25,8 @@ final class UserActivityViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let settingsVC = segue.destination as? SettingsViewController else { return }
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let settingsVC = navigationVC.topViewController as? SettingsViewController else { return }
         
         settingsVC.user = user
     }

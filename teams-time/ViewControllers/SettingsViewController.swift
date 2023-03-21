@@ -31,11 +31,11 @@ final class SettingsViewController: UIViewController {
     }
     
     //MARK: - IBActions
-    @IBAction func cancelButtonPressed() {
+    @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
-    @IBAction func saveButtonPressed() {
+    @IBAction func saveBarButtonPressed(_ sender: UIBarButtonItem) {
         if let text = nameTextField.text, !text.isEmpty {
             performSegue(withIdentifier: "saveChangesSegue", sender: nil)
         } else {
