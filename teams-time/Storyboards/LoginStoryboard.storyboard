@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jbm-Wm-LY2">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -9,36 +9,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login Screen-->
+        <!--Login-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="LoginStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="teams_time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-7E-zBI">
-                                <rect key="frame" x="40" y="104" width="240" height="296.5"/>
+                                <rect key="frame" x="40" y="184.99999999999997" width="313" height="290.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4A5-0u-GNg">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="296.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="290.33333333333331"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ey4-F8-ah8">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="hgq-7w-ZDz"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="4A5-0u-GNg" id="9ia-JP-VQh"/>
                                                 </connections>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="Co1-64-yyH">
-                                                <rect key="frame" x="0.0" y="40" width="240" height="216"/>
+                                                <rect key="frame" x="0.0" y="34" width="313" height="216"/>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiT-hT-XcN">
-                                                <rect key="frame" x="0.0" y="256" width="240" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="250.00000000000003" width="313" height="40.333333333333343"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <color key="tintColor" red="0.94564765691757202" green="0.98415738344192505" blue="0.97545069456100464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
@@ -57,12 +54,13 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MqU-7E-zBI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="1Qz-k8-AKS"/>
+                            <constraint firstItem="MqU-7E-zBI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jFD-eA-unP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MqU-7E-zBI" secondAttribute="trailing" constant="40" id="rfW-Dr-4FE"/>
-                            <constraint firstItem="MqU-7E-zBI" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-32" id="tX1-ls-vbc"/>
                             <constraint firstItem="MqU-7E-zBI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="zf2-Pc-KxM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login Screen" id="rVh-b4-LZB"/>
+                    <navigationItem key="navigationItem" title="Login" id="rVh-b4-LZB"/>
                     <connections>
                         <outlet property="loginButton" destination="SiT-hT-XcN" id="OX0-ej-xLA"/>
                         <outlet property="timeZonePicker" destination="Co1-64-yyH" id="W3c-2F-MV1"/>
@@ -90,7 +88,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jbm-Wm-LY2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="EAl-If-Xly">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

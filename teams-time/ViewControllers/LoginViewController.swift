@@ -22,7 +22,7 @@ final class LoginViewController: UIViewController {
         timeZonePicker?.dataSource = self
         timeZonePicker?.delegate = self
         
-        loginButton.layer.cornerRadius = 8
+        loginButton.layer.cornerRadius = 10
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
