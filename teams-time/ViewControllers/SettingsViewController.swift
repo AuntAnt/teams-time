@@ -35,6 +35,14 @@ final class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func saveButtonPressed() {
+        if let text = nameTextField.text, !text.isEmpty {
+            performSegue(withIdentifier: "saveChangesSegue", sender: nil)
+        } else {
+            showAlert(with: "Name can't be empty", and: "Please fill in the name field")
+        }
+    }
+    
     private func setDefaultTimezone() {
         timezonePicker.selectRow(
             Timezone.allCases.firstIndex(of: user.timezone) ?? 0,

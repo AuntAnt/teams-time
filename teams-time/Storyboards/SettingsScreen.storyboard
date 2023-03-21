@@ -56,7 +56,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="mY6-xZ-FmM" kind="unwind" unwindAction="unwindTo:" id="YX2-bw-LMC"/>
+                                            <action selector="saveButtonPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xQa-VO-aBJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-B0-wOb">
@@ -90,6 +90,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="Pve-2F-TIy" id="trK-3Y-z7I"/>
                         <outlet property="timezonePicker" destination="leG-4n-dmr" id="B71-Sb-IOF"/>
+                        <segue destination="mY6-xZ-FmM" kind="unwind" identifier="saveChangesSegue" unwindAction="unwindTo:" id="bQW-fg-71j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
