@@ -31,8 +31,16 @@ final class SettingsViewController: UIViewController {
     }
     
     //MARK: - IBActions
-    @IBAction func cancelButtonPressed() {
+    @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
+    }
+    
+    @IBAction func saveBarButtonPressed(_ sender: UIBarButtonItem) {
+        if let text = nameTextField.text, !text.isEmpty {
+            performSegue(withIdentifier: "saveChangesSegue", sender: nil)
+        } else {
+            showAlert(with: "Name can't be empty", and: "Please fill in the name field")
+        }
     }
     
     private func setDefaultTimezone() {

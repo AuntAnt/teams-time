@@ -50,7 +50,7 @@ final class LoginViewController: UIViewController {
         
         user = TeamMember(name: userName, timezone: selectedTimezone, contact: nil)
         
-        if userNameTextField.text == "" {
+        if let text = userNameTextField.text, text.isEmpty {
             showAlert(with: "Required field is empty", and: "Please, enter your name")
         } else {
             performSegue(withIdentifier: "openMainVC", sender: nil)

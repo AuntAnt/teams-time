@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="2014" y="-2"/>
         </scene>
-        <!--settingsStoryboard-->
+        <!--navController-->
         <scene sceneID="NjO-2p-AJ7">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="settingsStoryboard" storyboardName="SettingsScreen" referencedIdentifier="settingsStoryboard" id="yhI-BQ-Tlp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="navController" storyboardName="SettingsScreen" referencedIdentifier="navController" id="yhI-BQ-Tlp" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UgI-qC-yJZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gp7-BA-Bsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
