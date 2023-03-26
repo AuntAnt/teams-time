@@ -20,10 +20,12 @@ final class FocusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pauseButton.isEnabled = false
         resetTimer()
     }
     
     @IBAction func startButtonPressed() {
+        pauseButton.isEnabled = true
         startButton.setTitle("restart", for: .normal)
         startButton.setImage(UIImage(systemName: "repeat.circle"), for: .normal)
         
