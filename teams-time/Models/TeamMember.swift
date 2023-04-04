@@ -39,6 +39,19 @@ struct TeamMember {
 struct WorkingTime {
     var from: Int
     var to: Int
+    
+    init(from: Int, to: Int) {
+        self.from = from
+        self.to = to
+    }
+    
+    init(from: String, to: String) {
+        if let from = Int(from), let to = Int(to) {
+            self.init(from: from, to: to)
+        } else {
+            self.init(from: 9, to: 18)
+        }
+    }
 }
 
 enum Timezone: String, CaseIterable {

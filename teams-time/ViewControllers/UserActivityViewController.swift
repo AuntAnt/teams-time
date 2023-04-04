@@ -35,6 +35,11 @@ final class UserActivityViewController: UIViewController {
         guard let settingsVC = unwindSegue.source as? SettingsViewController else { return }
         timeStatus.cancelTimer()
         
+        user.workingTime = WorkingTime(
+            from: settingsVC.fromTextField.text!.components(separatedBy: ":").first ?? "9",
+            to: settingsVC.toTextField.text!.components(separatedBy: ":").first ?? "18"
+        )
+        
         user.name = settingsVC.nameTextField.text!
         user.timezone = Timezone(rawValue: settingsVC.selectedTimeZone)!
         

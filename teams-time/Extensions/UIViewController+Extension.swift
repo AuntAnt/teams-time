@@ -1,5 +1,5 @@
 //
-//  Extension + UIViewController.swift
+//  UIViewController+Extension.swift
 //  teams-time
 //
 //  Created by Anton Kuzmin on 18.03.2023.

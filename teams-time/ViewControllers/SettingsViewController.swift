@@ -12,6 +12,14 @@ final class SettingsViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var timezonePicker: UIPickerView!
     
+    @IBOutlet var fromTextField: UITextField!
+    @IBOutlet var fromStepper: UIStepper!
+    
+    @IBOutlet var toTextField: UITextField!
+    @IBOutlet var toStepper: UIStepper!
+    
+    @IBOutlet var saveBarButton: UIBarButtonItem!
+    
     var user: TeamMember!
     var selectedTimeZone: String!
 
@@ -19,10 +27,19 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         nameTextField.text = user.name
+        
+        fromTextField.text = "\(user.workingTime.from):00"
+        fromStepper.value = Double(user.workingTime.from)
+        
+        toTextField.text = "\(user.workingTime.to):00"
+        toStepper.value = Double(user.workingTime.to)
+        
         timezonePicker.delegate = self
         timezonePicker.dataSource = self
         
         setDefaultTimezone()
+        
+        nameTextField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,13 +53,25 @@ final class SettingsViewController: UIViewController {
     }
     
     @IBAction func saveBarButtonPressed(_ sender: UIBarButtonItem) {
-        if let text = nameTextField.text, !text.isEmpty {
+        if !validateWorkingTime() {
             performSegue(withIdentifier: "saveChangesSegue", sender: nil)
         } else {
-            showAlert(with: "Name can't be empty", and: "Please fill in the name field")
+            showAlert(
+                with: "Incorrect working time",
+                and: "Your start working time should be less ending time"
+            )
         }
     }
     
+    @IBAction func fromStepperPressed(_ sender: UIStepper) {
+        if sender.tag == 0 {
+            fromTextField.text = "\(Int(sender.value)):00"
+        } else {
+            toTextField.text = "\(Int(sender.value)):00"
+        }
+    }
+    
+    // MARK: - private methods
     private func setDefaultTimezone() {
         timezonePicker.selectRow(
             Timezone.allCases.firstIndex(of: user.timezone) ?? 0,
@@ -51,6 +80,14 @@ final class SettingsViewController: UIViewController {
         )
         
         selectedTimeZone = Timezone.allCases[timezonePicker.selectedRow(inComponent: 0)].rawValue
+    }
+    
+    private func validateWorkingTime() -> Bool {
+        fromStepper.value >= toStepper.value
+    }
+    
+    @objc private func textChanged() {
+        saveBarButton.isEnabled = !nameTextField.text!.isEmpty
     }
 }
 
