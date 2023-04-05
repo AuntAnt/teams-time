@@ -24,7 +24,7 @@
 		9B3B2B6F29BFB3E400D3B907 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2B6E29BFB3E400D3B907 /* LoginViewController.swift */; };
 		9B3B2B7129BFB3EE00D3B907 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B2B7029BFB3EE00D3B907 /* LoginStoryboard.storyboard */; };
 		9B92F27029C0467F00078F1C /* TimeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92F26F29C0467F00078F1C /* TimeStatus.swift */; };
-		9BD911CC29C59891001A391E /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD911CB29C59891001A391E /* Extension + UIViewController.swift */; };
+		9BD911CC29C59891001A391E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD911CB29C59891001A391E /* UIViewController+Extension.swift */; };
 		C8CE3A6429BF69A0003D8362 /* TeamMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE3A6329BF69A0003D8362 /* TeamMemberDetailViewController.swift */; };
 		C8CE3A6C29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CE3A6B29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,7 @@
 		9B3B2B6E29BFB3E400D3B907 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B3B2B7029BFB3EE00D3B907 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		9B92F26F29C0467F00078F1C /* TimeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatus.swift; sourceTree = "<group>"; };
-		9BD911CB29C59891001A391E /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		9BD911CB29C59891001A391E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C8CE3A6329BF69A0003D8362 /* TeamMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewController.swift; sourceTree = "<group>"; };
 		C8CE3A6B29BFC75F003D8362 /* TeamMemberDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamMemberDetailStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +160,7 @@
 		9BD911CA29C59814001A391E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9BD911CB29C59891001A391E /* Extension + UIViewController.swift */,
+				9BD911CB29C59891001A391E /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 				8015777A29BF9C55004C007F /* MemberCell.swift in Sources */,
 				802BB09D29C46865004AA404 /* FocusViewController.swift in Sources */,
 				16E89FDB29BE017200B5B558 /* TabBarViewController.swift in Sources */,
-				9BD911CC29C59891001A391E /* Extension + UIViewController.swift in Sources */,
+				9BD911CC29C59891001A391E /* UIViewController+Extension.swift in Sources */,
 				9B05C83929BA3A3D008B1D08 /* SceneDelegate.swift in Sources */,
 				9B92F27029C0467F00078F1C /* TimeStatus.swift in Sources */,
 				C8CE3A6429BF69A0003D8362 /* TeamMemberDetailViewController.swift in Sources */,
